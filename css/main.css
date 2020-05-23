@@ -5,6 +5,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -82,17 +83,30 @@
   align-items: center;
 }
 .container .card:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 .pages {
   width: 70%;
-  margin: 2vh auto;
-  display: flex;
-  justify-content: space-between;
+  margin: 5vh auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
 }
 .pages a {
   background: #444;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.pages a:hover {
+  transform: scale(1.1);
 }
 
 footer {

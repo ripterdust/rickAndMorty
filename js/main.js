@@ -10,12 +10,12 @@ getCharacters = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        message.innerHTML = 'Welcome to Rick and morty API'
+        message.innerHTML = '<p class="animate__animated animate__jackInTheBox">Welcome to Rick and morty API</p>'
         container.innerHTML = '';
         // Bucle que imprime las cartas
         for (let i = 0; i < data.results.length; i++) {
             container.innerHTML += `
-            <div class="card">
+            <div class="card animate__bounceIn">
                 <img src="${data.results[i].image}" alt="">
                 <div class="data">
                     <div class="items">
@@ -40,12 +40,12 @@ getAllCharacters = (page = 2) => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        message.innerHTML = 'All characters'
+        message.innerHTML = message.innerHTML = '<p class="animate__animated animate__jackInTheBox">All characters</p>'
         container.innerHTML = '';
         // Bucle que imprime las cartas
         for (let i = 0; i < data.results.length; i++) {
             container.innerHTML += `
-            <div class="card">
+            <div class="card animate__bounceIn">
                 <img src="${data.results[i].image}" alt="">
                 <div class="data">
                     <div class="items">
@@ -64,7 +64,7 @@ getAllCharacters = (page = 2) => {
         list.innerHTML = ''
         for (let index = 3; index <= data.info.pages; index++) {
             list.innerHTML += `
-                <a onclick="getAllCharacters(${index})">${index}</a>
+                <a onclick="getAllCharacters(${index})" href="#nav">${index}</a>
             `
 
             
