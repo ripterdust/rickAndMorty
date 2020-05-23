@@ -9,27 +9,56 @@
 
 .nav {
   width: 100%;
-  height: 40vh;
-  background: url("../img/fondo.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 8vh;
+  background: #333;
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
 }
-.nav .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.nav .title, .nav .links .link {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.nav .title:hover, .nav .links .link:hover {
+  scale: 1.1;
+}
+.nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+.nav .links .link {
+  padding: 0 15px;
+}
+.nav .links .link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+  grid-row-gap: 20px;
+}
+.container .card {
+  background: #444;
+  color: #fff;
+  display: flex;
+  overflow: hidden;
+}
+.container .card img {
+  height: 200px;
 }
 
 /*# sourceMappingURL=main.css.map */
