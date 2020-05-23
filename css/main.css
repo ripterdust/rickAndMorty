@@ -54,11 +54,23 @@
 .container .card {
   background: #444;
   color: #fff;
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% auto;
   overflow: hidden;
+  height: 200px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
 }
 .container .card img {
-  height: 200px;
+  height: 100%;
+}
+.container .card .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card:hover {
+  scale: 1.1;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -57,14 +57,27 @@
     grid-row-gap: 20px;
 
     .card{
+        
         background: #444;
         color: #fff;
-        display: flex;
+        display: grid;
+        grid-template-columns: 40% auto;
         overflow: hidden;
+        height: 200px;
+        border-radius: 10px;
+        transition: .3s ease-in-out;
         
-
         img{
-            height: 200px;
+            height: 100%;
         }
+        .data{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .card:hover{
+        scale: 1.1;
     }
 }
